@@ -24,7 +24,7 @@ Originally developed as a hands-on tool for the **NUS Fintech Society Machine Le
 
 ## Preview
 
-![App Preview](path/to/your-gif-file.gif)
+![App Preview](https://github.com/oadultradeepfield/timeseriesviz/blob/main/preview.gif)
 
 ## Key Features
 
