@@ -103,7 +103,7 @@ def main_components(dataframe: pd.DataFrame, choice_column: str, fig: go.Figure)
         unsafe_allow_html=True
     )
 
-    choice_model = st.selectbox("Model Options", options=["Please select", "ARIMA", "Random Forests", "XGBoost"], key="model")
+    choice_model = st.selectbox("Model Options", options=["Please select", "ARIMA", "Random Forests", "LightGBM"], key="model")
 
     if choice_model == "ARIMA":
         st.markdown(
@@ -225,7 +225,7 @@ if __name__ == "__main__":
         <div class="text-container" style="margin-top: 8px">
             <p style="font-size: 16px;">Made with ❤️📚 by <a href="https://www.instagram.com/oadultradeepfield/">@oadultradeepfield</a></p>
             <p style"margin-top: 64px">
-                Learn time series processing concepts like resampling, lag features, rolling statistics, and modeling techniques such as ARIMA, random forests, and XGBoost, all enhanced by clear visualizations!
+                Learn time series processing concepts like resampling, lag features, rolling statistics, and modeling techniques such as ARIMA, random forests, and LightGBM, all enhanced by clear visualizations!
             </p>
         </div>
         <hr>

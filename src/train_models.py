@@ -3,7 +3,7 @@ import pandas as pd
 from typing import List, Tuple
 from statsmodels.tsa.arima.model import ARIMA
 from sklearn.ensemble import RandomForestRegressor
-from xgboost import XGBRegressor
+from lightgbm import LGBMRegressor
 
 def get_arima_prediction(data: pd.Series,
                          target_column: str,
@@ -35,7 +35,7 @@ def get_ml_prediction(model_name: str,
     Generate predictions on both the training and validation data using a specified machine learning model.
 
     Args:
-        model_name (str): The name of the model to use ('Random Forests' or 'XGBoost').
+        model_name (str): The name of the model to use ('Random Forests' or 'LightGBM').
         data_train (pd.DataFrame): Training data as a pandas DataFrame.
         data_validation (pd.DataFrame): Validation data as a pandas DataFrame.
         features (List[str]): List of feature column names for training.
@@ -48,11 +48,11 @@ def get_ml_prediction(model_name: str,
     """
     model_name_to_model = {
         "Random Forests": RandomForestRegressor(random_state=0),
-        "XGBoost": XGBRegressor(random_state=0)
+        "LightGBM": LGBMRegressor(random_state=0)
     }
 
     if model_name not in model_name_to_model:
-        raise ValueError(f"Model '{model_name}' is not supported. Choose 'Random Forests' or 'XGBoost'.")
+        raise ValueError(f"Model '{model_name}' is not supported. Choose 'Random Forests' or 'LightGBM'.")
 
     model = model_name_to_model[model_name]
 
