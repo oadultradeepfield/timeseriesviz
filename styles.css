@@ -1,0 +1,32 @@
+/* Import the Inter font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+/* Apply Inter font globally */
+* {
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* Apply specific styles for H1 tags (e.g., centering them) */
+h1 {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 27px;
+  color: #3494fa;
+}
+
+.text-container {
+  padding-left: 36px;
+  padding-right: 36px;
+  margin-top: 18px;
+  text-align: center;
+}
