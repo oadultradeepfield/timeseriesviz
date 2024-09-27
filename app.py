@@ -201,10 +201,10 @@ def main_components(dataframe: pd.DataFrame, choice_column: str, fig: go.Figure)
                                         features,
                                         choice_column)
             
-            metrics = calculate_metrics(dataframe[f"{choice_column}_imputed"], ml_results[0])
-            residuals = calculate_residuals(dataframe[f"{choice_column}_imputed"], ml_results[0])
+            metrics = calculate_metrics(dataframe[f"{choice_column}_imputed"], ml_results)
+            residuals = calculate_residuals(dataframe[f"{choice_column}_imputed"], ml_results)
             
-            result_fig = visualize_model_predictions(fig, dataframe, ml_results[0])
+            result_fig = visualize_model_predictions(fig, dataframe, ml_results)
             st.plotly_chart(result_fig, use_container_width=True)
             
             metric1, metric2, metric3 = st.columns(3)

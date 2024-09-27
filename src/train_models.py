@@ -30,7 +30,7 @@ def get_ml_prediction(model_name: str,
                       data_train: pd.DataFrame,
                       data_validation: pd.DataFrame,
                       features: List[str],
-                      target_column: str) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+                      target_column: str) -> np.ndarray:
     """
     Generate predictions on both the training and validation data using a specified machine learning model.
 
@@ -42,9 +42,7 @@ def get_ml_prediction(model_name: str,
         target_column (str): The target variable column name.
 
     Returns:
-        Tuple[np.ndarray, np.ndarray]: A tuple containing predictions for the training set,
-                                       predictions for the validation set, 
-                                       and feature importances.
+        np.ndarray: An array containing predictions for the training set and the validation set.
     """
     model_name_to_model = {
         "Random Forests": RandomForestRegressor(random_state=0),
@@ -61,6 +59,4 @@ def get_ml_prediction(model_name: str,
     train_predictions = model.predict(data_train[features])
     validation_predictions = model.predict(data_validation[features])
 
-    feature_importances = model.feature_importances_
-
-    return np.concatenate((train_predictions, validation_predictions), axis=0), feature_importances
+    return np.concatenate((train_predictions, validation_predictions), axis=0)
