@@ -1,6 +1,12 @@
-# TimeSeriesViz
-
-**Time Series Visualization Tool for Processing and Modeling**
+<div align="center">
+  <img src="https://github.com/oadultradeepfield/timeseriesviz/blob/main/logo.png" width="64px"><br> 
+  <h1>
+    <i>TimeSeries</i>Viz
+  </h1>
+  <p>
+    Time Series Visualization Tool for Processing and Modeling
+  </p>
+</div>
 
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.38.0-ff4b4b?logo=Streamlit&logoColor=white)
