@@ -39,7 +39,7 @@ def load_toy_dataset(option: str, missing_fraction: float = 0.1) -> pd.DataFrame
     
     if missing_fraction > 0:
         mask = np.random.rand(*selected_data.shape) < missing_fraction
-        selected_data = selected_data.mask(mask)
+        selected_data.iloc[:, 1:] = selected_data.iloc[:, 1:].mask(mask)
 
     return selected_data
 
