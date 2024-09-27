@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 from typing import Callable, Dict
 
@@ -16,22 +17,30 @@ def reverse_data(data: pd.DataFrame) -> pd.DataFrame:
     
     return data
     
-def load_toy_dataset(option: str) -> pd.DataFrame:
+
+def load_toy_dataset(option: str, missing_fraction: float = 0.1) -> pd.DataFrame:
     """
-    Load a toy dataset based on the specified option.
+    Load a toy dataset based on the specified option, with randomly inserted missing data.
 
     Args:
         option (str): The name of the dataset to load.
+        missing_fraction (float): The fraction of values to randomly replace with NaN. Default is 0.1 (10%).
 
     Returns:
-        pd.DataFrame: The loaded dataset.
+        pd.DataFrame: The loaded dataset with random missing data.
     """
     option_to_path = {
         "Catfish": "src/data/catfish.csv", 
         "Ice Cream vs. Heater": "src/data/ice_cream_vs_heater.csv", 
         "Sales": "src/data/sales.csv",
     }
+    
     selected_data = pd.read_csv(option_to_path[option])
+    
+    if missing_fraction > 0:
+        mask = np.random.rand(*selected_data.shape) < missing_fraction
+        selected_data = selected_data.mask(mask)
+
     return selected_data
 
 def format_datetime_column(data: pd.DataFrame, 
