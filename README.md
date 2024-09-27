@@ -57,3 +57,5 @@ Contributions are welcome! Please feel free to submit a Pull Request or open an 
 
 ### Acknowledgements
 This app was built for the NUS Fintech Society Machine Learning Training AY24/25 as a part of an interactive hands-on curriculum. NUS Fintech Society was founded in 2018 in collaboration with NUS Fintech Lab under the NUS School of Computing. It has a mission to educate students with Fintech knowledge through industry projects, and connect and establish relationships with industry partners.
+
+The toy dataset used in this project is sourced and adapted from this Kaggle repository: https://www.kaggle.com/datasets/yekahaaagayeham/time-series-toy-data-set. I greatly appreciate the author for sharing it with us.
