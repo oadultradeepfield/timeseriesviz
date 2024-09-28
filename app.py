@@ -223,7 +223,7 @@ if __name__ == "__main__":
             <span style="color: #333333; font-style: italic; vertical-align: middle; margin-left: 6px;">TimeSeries</span><span style="color: #3494fa; vertical-align: middle;">Viz</span>
         </h1>
         <div class="text-container" style="margin-top: 8px">
-            <p style="font-size: 16px;">Made with ❤️📚 by <a href="https://www.instagram.com/oadultradeepfield/">@oadultradeepfield</a></p>
+            <p style="font-size: 16px;">Made with ❤️📚 by <a href="https://www.linkedin.com/in/phanuphats/">@oadultradeepfield</a></p>
             <p style"margin-top: 64px">
                 Learn time series processing concepts like resampling, lag features, rolling statistics, and modeling techniques such as ARIMA, random forests, and LightGBM, all enhanced by clear visualizations!
             </p>
