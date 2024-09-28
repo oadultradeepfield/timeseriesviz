@@ -68,7 +68,7 @@ def main_components(dataframe: pd.DataFrame, choice_column: str, fig: go.Figure)
     targeted_frequency = "Default"
     fig = plot_univariate_time_series(dataframe, choice_column)
     
-    if len(resampling_options) > 0:
+    if resampling_options:
         st.markdown(
             """
             <div style="margin-top: -6px; margin-bottom: 12px">
@@ -292,15 +292,6 @@ if __name__ == "__main__":
                 choice_column = target.selectbox("Select Targeted Column", options=["Please select"] + list(dataframe.columns.values), key="column_upload")
                 
                 if time_column != "Please select" and choice_column != "Please select":
-                    st.markdown(
-                        """
-                        <div style="margin-top: -6px; margin-bottom: 12px">
-                            <span>Your data may not be indexed with the desired frequency, consider downsampling it as needed. Select the available downsampling options below to proceed.</span> 
-                            <span style="color: #3494fa; font-weight:bold">The default option is the current frequency.</span>
-                        </div>
-                        """,
-                        unsafe_allow_html=True
-                    )
                     dataframe = format_datetime_column(dataframe, time_column)
                     fig = plot_univariate_time_series(dataframe, choice_column)
                     main_components(dataframe, choice_column, fig)
