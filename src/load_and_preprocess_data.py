@@ -35,6 +35,8 @@ def load_toy_dataset(option: str, missing_fraction: float = 0.1) -> pd.DataFrame
         "Sales": "src/data/sales.csv",
     }
     
+    np.random.seed(0)
+    
     selected_data = pd.read_csv(option_to_path[option])
     
     if missing_fraction > 0:
