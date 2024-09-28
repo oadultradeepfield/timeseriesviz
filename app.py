@@ -68,7 +68,7 @@ def main_components(dataframe: pd.DataFrame, choice_column: str, fig: go.Figure)
     targeted_frequency = "Default"
     fig = plot_univariate_time_series(dataframe, choice_column)
     
-    if resampling_options:
+    if len(resampling_options) > 0:
         st.markdown(
             """
             <div style="margin-top: -6px; margin-bottom: 12px">
@@ -208,9 +208,9 @@ def main_components(dataframe: pd.DataFrame, choice_column: str, fig: go.Figure)
             st.plotly_chart(result_fig, use_container_width=True)
             
             metric1, metric2, metric3 = st.columns(3)
-            metric1.metric("Mean Absolute Error", f"{metrics['mae']:.0f}")
-            metric2.metric("Root Mean Squared Error", f"{metrics['rmse']:.0f}")
-            metric3.metric("R-Squared Score", f"{metrics['r2']:.4f}")
+            metric1.metric("Mean Absolute Error", f"{metrics['mae']:.2f}")
+            metric2.metric("Root Mean Squared Error", f"{metrics['rmse']:.2f}")
+            metric3.metric("R-Squared Score", f"{metrics['r2']:.3f}")
             
             residual_fig = visualize_residuals(dataframe, residuals)
             st.plotly_chart(residual_fig, use_container_width=True)
