@@ -38,6 +38,8 @@ def load_toy_dataset(option: str, missing_fraction: float = 0.1) -> pd.DataFrame
     np.random.seed(0)
     
     selected_data = pd.read_csv(option_to_path[option])
+    int_columns = selected_data.select_dtypes(include=['int']).columns
+    selected_data[int_columns] = selected_data[int_columns].astype(float)
     
     if missing_fraction > 0:
         mask = np.random.rand(*selected_data.iloc[:, 1:].shape) < missing_fraction

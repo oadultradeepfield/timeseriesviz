@@ -199,7 +199,7 @@ def main_components(dataframe: pd.DataFrame, choice_column: str, fig: go.Figure)
                                         train_dataframe, 
                                         valid_dataframe,
                                         features,
-                                        choice_column)
+                                        f"{choice_column}_imputed")
             
             metrics = calculate_metrics(dataframe[f"{choice_column}_imputed"], ml_results)
             residuals = calculate_residuals(dataframe[f"{choice_column}_imputed"], ml_results)
