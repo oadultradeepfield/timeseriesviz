@@ -1,21 +1,10 @@
-<div align="center">
-  <img src="https://github.com/oadultradeepfield/timeseriesviz/blob/main/logo.png" width="64px"><br> 
-  <h1>
-    <i>TimeSeries</i>Viz
-  </h1>
-  <p>
-    Time Series Visualization Tool for Processing and Modeling
-  </p>
-</div>
+# TimeSeriesViz
 
-[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.38.0-ff4b4b?logo=Streamlit&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-2.2.3-150458?logo=pandas)
-![NumPy](https://img.shields.io/badge/NumPy-2.1.1-013243?logo=numpy&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.5.2-f7931e?logo=scikit-learn&logoColor=white)
-![LightGBM](https://img.shields.io/badge/LightGBM-4.5.0-00ff00?logo=LightGBM&logoColor=white)
-![Plotly](https://img.shields.io/badge/Plotly-5.24.1-3f4f75?logo=plotly&logoColor=white)
-![Statsmodels](https://img.shields.io/badge/Statsmodels-0.14.3-009999?logo=statsmodels&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white)
 
 ## Overview
 
