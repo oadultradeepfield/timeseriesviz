@@ -15,7 +15,7 @@ Originally developed as a hands-on tool for the **NUS Fintech Society Machine Le
 - **Resampling**, **Handling Missing Data**, **Lag Features**, **Rolling Statistics**
 - **ARIMA**, **Random Forest**, and **LightGBM** modeling techniques
 
-As of December 2024, I’ve decided to revamp the deployment process by containerizing the app with Docker and deploying it serverlessly on Google Cloud Run. The live version is now available [here](tsviz.phanuphats.com).
+As of December 2024, I’ve decided to revamp the deployment process by containerizing the app with Docker and deploying it serverlessly on Google Cloud Run. The live version is now being mapped [here](https://tsviz.phanuphats.com/).
 
 ## Preview
 
