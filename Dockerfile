@@ -1,20 +1,29 @@
+# Use a slim base image
 FROM python:3.11-slim
 
+# Set environment variables to reduce Python overhead
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+
+# Set working directory
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    curl \
-    software-properties-common \
-    git \
+# Copy only requirements first (to cache dependencies during rebuilds)
+COPY requirements.txt .
+
+# Install dependencies with no cache and clean up apt lists
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+    && apt-get install libgomp1 \
+    && pip3 install --no-cache-dir -r requirements.txt \
+    && apt-get purge -y --auto-remove build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/oadultradeepfield/timeseriesviz.git .
+# Copy the rest of the application
+COPY . .
 
-RUN pip3 install -r requirements.txt
-
+# Expose the port for the app
 EXPOSE 8080
 
-HEALTHCHECK CMD curl --fail http://localhost:8080/_stcore/health
-
+# Run the application
 ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8080", "--server.address=0.0.0.0"]

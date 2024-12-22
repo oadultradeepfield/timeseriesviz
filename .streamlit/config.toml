@@ -3,6 +3,3 @@ primaryColor="#3494fa"
 backgroundColor="#f9f9f9"
 secondaryBackgroundColor="#eeeeee"
 textColor="#333333"
-
-[server]
-runOnSave = true
