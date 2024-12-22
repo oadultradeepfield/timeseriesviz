@@ -1,6 +1,8 @@
+from typing import Callable, Dict
+
 import numpy as np
 import pandas as pd
-from typing import Callable, Dict
+
 
 def reverse_data(data: pd.DataFrame) -> pd.DataFrame:
     """

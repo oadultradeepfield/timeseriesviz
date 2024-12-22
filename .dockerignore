@@ -1,0 +1,7 @@
+.gitignore
+.git/
+**/__pycache__/
+Dockerfile
+*.md
+LICENSE
+assets/preview.gif

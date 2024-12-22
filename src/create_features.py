@@ -1,7 +1,7 @@
-import pandas as pd
 from typing import Callable, Dict
 
-# This file is only used for random forests and xgboost
+import pandas as pd
+
 
 def create_lag_features(data: pd.DataFrame,
                         column: str,

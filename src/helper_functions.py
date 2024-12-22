@@ -1,7 +1,9 @@
 from typing import Tuple
+
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
+
 
 def is_column_contain_missing_values(data: pd.DataFrame, 
                                      column: str) -> bool:

@@ -1,8 +1,9 @@
-import numpy as np
 from typing import Dict
-from sklearn.metrics import (mean_absolute_error, 
-                             root_mean_squared_error,
-                             r2_score)
+
+import numpy as np
+from sklearn.metrics import (mean_absolute_error, r2_score,
+                             root_mean_squared_error)
+
 
 def calculate_residuals(y_true: np.ndarray, 
                       y_pred: np.ndarray) -> np.ndarray:

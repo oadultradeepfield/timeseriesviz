@@ -1,9 +1,11 @@
+from typing import List, Tuple
+
 import numpy as np
 import pandas as pd
-from typing import List, Tuple
-from statsmodels.tsa.arima.model import ARIMA
-from sklearn.ensemble import RandomForestRegressor
 from lightgbm import LGBMRegressor
+from sklearn.ensemble import RandomForestRegressor
+from statsmodels.tsa.arima.model import ARIMA
+
 
 def get_arima_prediction(data: pd.Series,
                          target_column: str,

@@ -15,11 +15,11 @@ Originally developed as a hands-on tool for the **NUS Fintech Society Machine Le
 - **Resampling**, **Handling Missing Data**, **Lag Features**, **Rolling Statistics**
 - **ARIMA**, **Random Forest**, and **LightGBM** modeling techniques
 
-🔗 **[Try the live app here!](https://timeseriesviz.streamlit.app/)**
+As of December 2024, I’ve decided to revamp the deployment process by containerizing the app with Docker and deploying it serverlessly on Google Cloud Run. The live version is now available [here]().
 
 ## Preview
 
-![App Preview](https://github.com/oadultradeepfield/timeseriesviz/blob/main/preview.gif)
+![App Preview](/src/assets/preview.gif)
 
 ## Key Features
 
@@ -38,19 +38,32 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+Alternatively, you can run the app using Docker (recommended):
+
+```bash
+git clone https://github.com/oadultradeepfield/timeseriesviz.git
+cd timeseriesviz
+docker build -t timeseriesviz .
+docker run -p 8080:8080 timeseriesviz
+```
+
 ## Usage
+
 1. Upload your time series dataset.
 2. Experiment with various preprocessing methods like data imputation, resampling, and feature creation.
 3. Select models such as ARIMA or LightGBM and tune hyperparameters.
 4. Visualize the impact of each change in real-time.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/oadultradeepfield/timeseriesviz/blob/main/LICENSE) file for details.
+
+This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details.
 
 ## Contributing
+
 Contributions are welcome! Please feel free to submit a Pull Request or open an Issue to enhance the tool.
 
-### Acknowledgements
+## Acknowledgements
+
 This app was built for the NUS Fintech Society Machine Learning Training AY24/25 as a part of an interactive hands-on curriculum. NUS Fintech Society was founded in 2018 in collaboration with NUS Fintech Lab under the NUS School of Computing. It has a mission to educate students with Fintech knowledge through industry projects, and connect and establish relationships with industry partners.
 
 The toy dataset used in this project is sourced and adapted from this Kaggle repository: https://www.kaggle.com/datasets/yekahaaagayeham/time-series-toy-data-set. I greatly appreciate the author for sharing it.
