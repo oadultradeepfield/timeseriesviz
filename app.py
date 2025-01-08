@@ -19,6 +19,7 @@ from src.train_models import get_arima_prediction, get_ml_prediction
 
 # Load your styles.css file
 with open('styles.css') as f:
+    st.set_page_config(page_title="TimeSeriesViz", page_icon="https://iili.io/ds4RP6b.png")
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
     
 frequency_to_alias = {
